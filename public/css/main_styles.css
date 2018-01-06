@@ -51,12 +51,17 @@ h3 span{
   font-size: 3rem;
   line-height: 80px;
   text-indent: 20px;
+  margin-left: 320px;
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: #000;
   display: block;
   text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 6rem;
 }
 
 .sidebar-nav li a:hover {
@@ -97,12 +102,9 @@ h3 span{
 	background-color: transparent;
 	border: none;
 }
-.btn-primary.btn-lg:active{
-  color:transparent;
-}
 
 /*brand*/
-.navbar-brand{
+a.navbar-brand{
   font-size: 6rem;
   color: #fff;
   position: absolute;
@@ -112,27 +114,30 @@ h3 span{
 }
 
 /*social*/
+.socials{
+	margin-top: 230px;
+}
 .sociasl ul{
 	list-style: none;
 }
 .socials ul li{
 	position: relative;
 	display: inline-block;
+	padding-right: 12px;
 }
 .socials ul li a:before{
 	font-family: FontAwesome;
 	display: inline-block;
 	vertical-align: top;
-	padding: 0 .4rem;
-	font-size: 2rem;
-	color: #e082a8;
+	padding: 0 10px;
+	padding: 5px;
+	font-size: 1.5rem;
+	color: #000;
 	-webkit-font-smoothing: antialiased;
+	border: 1.5px solid #000;
+	border-radius: 50px;
 }
 
-/*car*/
-div.margin-bottom {
-  margin-bottom: 50px;
-}
 
 /*carousel*/
 .carousel .carousel-caption{
@@ -172,11 +177,19 @@ div.margin-bottom {
 .carousel img{
 	width: 100%;
 }
-/*arrow*/
+/*ARROW0-----------------------------------------*/
 .arrow{
 	width: 30%;
 }
+/*new site*/
+/*
 
+
+	empty
+
+
+
+*/
 
 /*image links*/
 .image-links img{
@@ -185,11 +198,11 @@ div.margin-bottom {
 	-ms-transition: transform .3s ease;
 	transition: transform .3s ease;
 }
-.image-links img:hover{
+/*.image-links img:hover{
 	-webkit-transform: scale(1.2) rotate(10deg);;
 	-ms-transform: scale(1.2) rotate(10deg);;
 	transform: scale(1.2) rotate(10deg);;
-}
+}*/
 .image-info{
 	background-color: #fff;
 	margin-top: -50px;
@@ -210,6 +223,84 @@ div.margin-bottom {
 	background-color: #fff;
 	margin-top: -400px;
 	margin-bottom: -50px;
+	border: 1px solid lightgray;
+}
+.jk{
+	letter-spacing: 1.5px;
+	font-weight: bold;
+}
+.lmao{
+	width: 100%;
+	background-color: lightgray;
+}
+/*.form-group input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ecf0f1;
+    color: white;
+}*/
+.form-group .form-control{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ecf0f1;
+    font-weight: bold;
+}
+/*checkmate*/
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+input[type="checkbox"] + label:before {
+	background-color: white;
+	border: 1.5px solid #000;
+	content: "";
+	display: inline-block;
+	font-size: 18px;
+	height: 18px;
+	width: 24px;
+	line-height: 18px;
+	margin: -2px 6px 0 0;
+	padding-bottom: 22px;
+	text-align: center;
+	vertical-align: middle;
 }
 
+input[type="checkbox"]:checked + label:before {
+	content: "\2714";
+	font-size:33px;
+}
 
+input[type="radio"] + label:before {
+	background-color: white;
+	border: 1.5px solid #000;
+	border-radius: 10px;
+	content: "";
+	display: inline-block;
+	font-size: 18px;
+	height: 18px;
+	width: 24px;
+	line-height: 18px;
+	margin: -2px 6px 0 0;
+	padding-bottom: 22px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input[type="radio"]:checked + label:before {
+	content: "\2022";
+	font-size:33px;
+}
+.btn-primary.btn-black{
+	border: 1px;
+	border-radius: 0;
+	background-color: #000;
+	letter-spacing: 2px;
+}
+.xbox{
+	margin-top: 90px;
+}
