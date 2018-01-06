@@ -4,25 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Menu;
+use App\Slider;
+use App\Service;
 
 class MenuController extends Controller
 {
-    public function showMenu(){
-    	/*$menu = new Menu;
-    	$menu->title = 'HOME';
-    	$menu->link = "#";
-    	
-    	$menu->title = 'SERVICE';
-    	$menu->link = "#";
+    public function showMenu() {
 
-    	$menu->title = 'CONTACT';
-    	$menu->link = "#";
-    	$menu->save();*/
+    		$menu = Menu::all();
+	        $slider = Slider::all();
+	        $service = Service::all();
 
-
-    	$menu = Menu::all();
-    	
-    	return view('welcome', ['menu'=>$menu]);
+    		return view('welcome', ['menu'=>$menu, 'slider'=>$slider, 'service'=>$service]);
 
     }
 }

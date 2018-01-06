@@ -1,14 +1,17 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main_styles.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700|Raleway:400,700,900" rel="stylesheet">
-    <link href="css/styles.css">
+    
     <title>CARS</title>
+    
   </head>
   <body>
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -24,31 +27,26 @@
             <a class="navbar-brand" href="#">AUṪO</a>
         
     <!-- carousel -->
+     
     <div class="">
+      
       <div id="main-slider" class="carousel slide" data-ride="carousel">
+        
         <div class="carousel-inner" role="listbox">
+
           <div class="carousel-item active">
-            <img src="img/slide_04.jpg" class="d-block img-fluid" alt="wq">
+            @foreach ($slider as  $value)
+            <img src="{{$value->image}}" class="d-block img-fluid" alt="wq">
+
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="text-uppercase">27.11.</h3>
-              <p class="">Vintage Auto Exhibition</p>
+              <h3 class="text-uppercase">{{$value->date}}</h3>
+              <p class="">{{$value->description}}</p>
             </div>
+            @endforeach
           </div>
-          <div class="carousel-item">
-            <img src="img/slide_04.jpg" class="d-block img-fluid" alt="wq">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 class="text-uppercase">27.11.</h3>
-              <p class="">Vintage Auto Exhibition</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/slide_04.jpg" class="d-block img-fluid" alt="wq">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 class="text-uppercase">27.11.</h3>
-              <p class="">Vintage Auto Exhibition</p>
-            </div>
-          </div>
+           
         </div>
+       
         <a href="#main-slider" class="carousel-control-prev" data-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </a>
@@ -57,7 +55,9 @@
         </a>
 
       </div>
+      
     </div>
+
     <!-- endCarousel -->
     <!-- newWeb -->
     <section class="new-website py-5">
@@ -67,25 +67,20 @@
     <!-- imgs-->
     <div class="container pb-5">
       <div class="row">
+        @foreach ($service as  $value)
         <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
           <div class="image-links">
-            <img src="img/asset1.svg" class="image-fluid">
+            <a href="{{$value->link}}">
+              <img src="{{$value->image}}" class="image-fluid">
+              <p>{{$value->title}}</p>
+            </a>
           </div>
         </div>
-
-        <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
-          <div class="image-links">
-            <img src="img/asset2.svg" class="image-fluid">
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
-          <div class="image-links">
-            <img src="img/asset3.svg" class="image-fluid">
-          </div>
-        </div>
-
+        @endforeach
       </div>
+    </div>
+    <div class="container-fluid margin-bottom">
+      <img src="img/background.svg">
     </div>
     <!-- imgs end -->
     <!-- map -->
@@ -97,7 +92,7 @@
     </section>
     <div class="row">
       <div class="col-8 offset-2 col-md-8 offset-md-2 map-info pt-4">
-        asd
+        
       </div>
     </div>
   </div>
@@ -110,7 +105,7 @@
           <hr class="w-100">
           <div class="col-8 offset-2 col-md-8 offset-md-2">
             <p class="d-inline">&copy; copyright 2017</p>
-            <p class="d-inline float-right">created by:name surname</p>
+            <p class="d-inline float-right">Front-end: Temo Chkhaidze<br> Back-end: Tamar Mekhrishvili</p>
           </div>
         </div>
       </div>

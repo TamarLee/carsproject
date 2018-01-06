@@ -129,6 +129,10 @@ h3 span{
 	-webkit-font-smoothing: antialiased;
 }
 
+/*car*/
+div.margin-bottom {
+  margin-bottom: 50px;
+}
 
 /*carousel*/
 .carousel .carousel-caption{
@@ -168,19 +172,11 @@ h3 span{
 .carousel img{
 	width: 100%;
 }
-/*ARROW0-----------------------------------------*/
+/*arrow*/
 .arrow{
 	width: 30%;
 }
-/*new site*/
-/*
 
-
-	empty
-
-
-
-*/
 
 /*image links*/
 .image-links img{
@@ -215,4 +211,5 @@ h3 span{
 	margin-top: -400px;
 	margin-bottom: -50px;
 }
+
 
