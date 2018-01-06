@@ -70,7 +70,7 @@
                 </div>
             </div>
         </nav>
-        @yield('mainpage')
+
         @yield('content')
     </div>
 
