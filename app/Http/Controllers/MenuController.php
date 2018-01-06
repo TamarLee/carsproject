@@ -11,11 +11,15 @@ class MenuController extends Controller
 {
     public function showMenu() {
 
-    		$menu = Menu::all();
-	        $slider = Slider::all();
-	        $service = Service::all();
+		$menu = Menu::all();
+        $slider = Slider::all();
+        $service = Service::all();
 
-    		return view('welcome', ['menu'=>$menu, 'slider'=>$slider, 'service'=>$service]);
+		return view('welcome', ['menu'=>$menu, 'slider'=>$slider, 'service'=>$service]);
 
+    }
+
+    public function postMenu() {
+    	
     }
 }
